@@ -1,0 +1,42 @@
+# This workflow will build a golang project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-go
+
+name: Go
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+
+  build:
+    runs-on: self-hosted #[self-hosted, ubuntu-latest]
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version-file: "go.mod"
+
+    - name: Test
+      run: go test -v ./...
+
+    - name: Generate godoc
+      run: |
+        git fetch origin
+        git switch gh-pages || git switch -c gh-pages
+        git merge origin/main
+        rm -rf localhost:8888 docs
+        go install golang.org/x/tools/cmd/godoc@latest
+        $(go env GOPATH)/bin/godoc -http=localhost:8888 & \
+        sleep 30
+        wget -r -np -nv -N -E -p -k -e robots=off --reject-regex="png" "http://localhost:8888/pkg/github.com/sunmoondevlab/Go-file-extensions-enhance/"
+        pkill godoc
+        mv localhost:8888/ docs/
+    - name: Push docs to gh-pages
+      run: |
+        git add docs \
+        && git diff --cached --quiet \
+        || (git commit -m "docs: godoc を更新" && git push origin gh-pages)
