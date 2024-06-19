@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#375EAB">
+
+  <title>fileextenh - Go Documentation Server</title>
+
+<link type="text/css" rel="stylesheet" href="../../../../../lib/godoc/style.css">
+
+<script>window.initFuncs = [];</script>
+<script src="../../../../../lib/godoc/jquery.js" defer></script>
+
+
+
+<script>var goVersion = "go1.22.4";</script>
+<script src="../../../../../lib/godoc/godocs.js" defer></script>
+</head>
+<body>
+
+<div id='lowframe' style="position: fixed; bottom: 0; left: 0; height: 0; width: 100%; border-top: thin solid grey; background-color: white; overflow: auto;">
+...
+</div><!-- #lowframe -->
+
+<div id="topbar" class="wide"><div class="container">
+<div class="top-heading" id="heading-wide"><a href="http://localhost:8888/pkg/">Go Documentation Server</a></div>
+<div class="top-heading" id="heading-narrow"><a href="http://localhost:8888/pkg/">GoDoc</a></div>
+<a href="index.html#" id="menu-button"><span id="menu-button-arrow">&#9661;</span></a>
+<form method="GET" action="http://localhost:8888/search">
+<div id="menu">
+
+<span class="search-box"><input type="search" id="search" name="q" placeholder="Search" aria-label="Search" required><button type="submit"><span><!-- magnifying glass: --><svg width="24" height="24" viewBox="0 0 24 24"><title>submit search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M0 0h24v24H0z" fill="none"/></svg></span></button></span>
+</div>
+</form>
+
+</div></div>
+
+
+
+<div id="page" class="wide">
+<div class="container">
+
+
+  <h1>
+    Package fileextenh
+    <span class="text-muted"></span>
+  </h1>
+
+
+
+
+
+
+
+<div id="nav"></div>
+
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script>
+	document.ANALYSIS_DATA = null;
+	document.CALLGRAPH = null;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/sunmoondevlab/Go-file-extensions-enhance/fileextenh"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="index.html#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="index.html#pkg-index" class="indexLink">Index</a></dd>
+			
+				<dd><a href="index.html#pkg-examples" class="examplesLink">Examples</a></dd>
+			
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>filename extensions enhancement
+Copyright © 2024 sunmoondevlab
+
+				
+			</div>
+		</div>
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+			
+			
+				
+				<dd><a href="index.html#Base">func Base(fname string, withExt bool) string</a></dd>
+			
+				
+				<dd><a href="index.html#Ext">func Ext(fname string) string</a></dd>
+			
+				
+				<dd><a href="index.html#MatchFileExt">func MatchFileExt(fname string, ext string) bool</a></dd>
+			
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+		<div id="pkg-examples">
+			<h3>Examples</h3>
+			<div class="js-expandAll expandAll collapsed">(Expand All)</div>
+			<dl>
+			
+			<dd><a class="exampleLink" href="index.html#example_Base_withExtA">Base (WithExtA)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_Base_withExtTarGz">Base (WithExtTarGz)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_Base_withoutExtA">Base (WithoutExtA)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_Base_withoutExtTarGz">Base (WithoutExtTarGz)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_Ext_a">Ext (A)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_Ext_gz">Ext (Gz)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_Ext_tarGz">Ext (TarGz)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_MatchFileExt_matchA">MatchFileExt (MatchA)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_MatchFileExt_matchTarGz">MatchFileExt (MatchTarGz)</a></dd>
+			
+			<dd><a class="exampleLink" href="index.html#example_MatchFileExt_notMatchTarGz">MatchFileExt (NotMatchTarGz)</a></dd>
+			
+			</dl>
+		</div>
+		
+
+		
+			<h3>Package files</h3>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="http://localhost:8888/src/github.com/sunmoondevlab/Go-file-extensions-enhance/fileextenh/file_extensions_enhance.go">file_extensions_enhance.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		
+
+		
+		
+		
+			
+			
+			<h2 id="Base">func <a href="http://localhost:8888/src/github.com/sunmoondevlab/Go-file-extensions-enhance/fileextenh/file_extensions_enhance.go?s=164:208#L5">Base</a>
+				<a class="permalink" href="index.html#Base">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func Base(fname <a href="http://localhost:8888/pkg/builtin/#string">string</a>, withExt <a href="http://localhost:8888/pkg/builtin/#bool">bool</a>) <a href="http://localhost:8888/pkg/builtin/#string">string</a></pre>
+			<p>Get basename from filename.
+
+			<div id="example_Base_withExtA" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (WithExtA)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (WithExtA)</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">f := Base(&#34;testdata/exists.test.a&#34;, true)
+fmt.Println(f)
+<span class="comment"></pre>
+			
+			<p>Output:</p>
+			<pre class="output">exists.test.a
+</pre>
+			
+		
+	</div>
+</div>
+<div id="example_Base_withExtTarGz" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (WithExtTarGz)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (WithExtTarGz)</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">f := Base(&#34;testdata/exists.test.tar.gz&#34;, true)
+fmt.Println(f)
+<span class="comment"></pre>
+			
+			<p>Output:</p>
+			<pre class="output">exists.test.tar.gz
+</pre>
+			
+		
+	</div>
+</div>
+<div id="example_Base_withoutExtA" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (WithoutExtA)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (WithoutExtA)</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">f := Base(&#34;testdata/exists.test.a&#34;, false)
+fmt.Println(f)
+<span class="comment"></pre>
+			
+			<p>Output:</p>
+			<pre class="output">exists.test
+</pre>
+			
+		
+	</div>
+</div>
+<div id="example_Base_withoutExtTarGz" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (WithoutExtTarGz)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (WithoutExtTarGz)</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">f := Base(&#34;testdata/exists.test.tar.gz&#34;, false)
+fmt.Println(f)
+<span class="comment"></pre>
+			
+			<p>Output:</p>
+			<pre class="output">exists.test
+</pre>
+			
+		
+	</div>
+</div>
+
+			
+
+		
+			
+			
+			<h2 id="Ext">func <a href="http://localhost:8888/src/github.com/sunmoondevlab/Go-file-extensions-enhance/fileextenh/file_extensions_enhance.go?s=388:417#L18">Ext</a>
+				<a class="permalink" href="index.html#Ext">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func Ext(fname <a href="http://localhost:8888/pkg/builtin/#string">string</a>) <a href="http://localhost:8888/pkg/builtin/#string">string</a></pre>
+			<p>Get extension from filename.
+
+			<div id="example_Ext_a" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (A)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (A)</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">f := Ext(&#34;testdata/exists.test.a&#34;)
+fmt.Println(f)
+<span class="comment"></pre>
+			
+			<p>Output:</p>
+			<pre class="output">.a
+</pre>
+			
+		
+	</div>
+</div>
+<div id="example_Ext_gz" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (Gz)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (Gz)</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">f := Ext(&#34;testdata/exists.test.gz&#34;)
+fmt.Println(f)
+<span class="comment"></pre>
+			
+			<p>Output:</p>
+			<pre class="output">.gz
+</pre>
+			
+		
+	</div>
+</div>
+<div id="example_Ext_tarGz" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (TarGz)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (TarGz)</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">f := Ext(&#34;testdata/exists.test.tar.gz&#34;)
+fmt.Println(f)
+<span class="comment"></pre>
+			
+			<p>Output:</p>
+			<pre class="output">.tar.gz
+</pre>
+			
+		
+	</div>
+</div>
+
+			
+
+		
+			
+			
+			<h2 id="MatchFileExt">func <a href="http://localhost:8888/src/github.com/sunmoondevlab/Go-file-extensions-enhance/fileextenh/file_extensions_enhance.go?s=840:888#L37">MatchFileExt</a>
+				<a class="permalink" href="index.html#MatchFileExt">&#xb6;</a>
+				
+				
+			</h2>
+			<pre>func MatchFileExt(fname <a href="http://localhost:8888/pkg/builtin/#string">string</a>, ext <a href="http://localhost:8888/pkg/builtin/#string">string</a>) <a href="http://localhost:8888/pkg/builtin/#bool">bool</a></pre>
+			<p>Match file name extension  the specified extension?
+
+			<div id="example_MatchFileExt_matchA" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (MatchA)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (MatchA)</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">f := MatchFileExt(&#34;testdata/exists.test.a&#34;, &#34;.a&#34;)
+fmt.Println(f)
+<span class="comment"></pre>
+			
+			<p>Output:</p>
+			<pre class="output">true
+</pre>
+			
+		
+	</div>
+</div>
+<div id="example_MatchFileExt_matchTarGz" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (MatchTarGz)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (MatchTarGz)</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">f := MatchFileExt(&#34;testdata/exists.test.tar.gz&#34;, &#34;.tar.gz&#34;)
+fmt.Println(f)
+<span class="comment"></pre>
+			
+			<p>Output:</p>
+			<pre class="output">true
+</pre>
+			
+		
+	</div>
+</div>
+<div id="example_MatchFileExt_notMatchTarGz" class="toggle">
+	<div class="collapsed">
+		<p class="exampleHeading toggleButton">▹ <span class="text">Example (NotMatchTarGz)</span></p>
+	</div>
+	<div class="expanded">
+		<p class="exampleHeading toggleButton">▾ <span class="text">Example (NotMatchTarGz)</span></p>
+		
+		
+		
+			<p>Code:</p>
+			<pre class="code">f := MatchFileExt(&#34;testdata/exists.test.tar.gz&#34;, &#34;.tgz&#34;)
+fmt.Println(f)
+<span class="comment"></pre>
+			
+			<p>Output:</p>
+			<pre class="output">false
+</pre>
+			
+		
+	</div>
+</div>
+
+			
+
+		
+		
+	
+
+	
+
+
+
+
+
+
+
+<div id="footer">
+Build version go1.22.4.<br>
+Except as <a href="https://developers.google.com/site-policies#restrictions">noted</a>,
+the content of this page is licensed under the
+Creative Commons Attribution 3.0 License,
+and code is licensed under a <a href="http://localhost:8888/LICENSE">BSD license</a>.<br>
+<a href="https://golang.org/doc/tos.html">Terms of Service</a> |
+<a href="https://www.google.com/intl/en/policies/privacy/">Privacy Policy</a>
+</div>
+
+</div><!-- .container -->
+</div><!-- #page -->
+</body>
+</html>
