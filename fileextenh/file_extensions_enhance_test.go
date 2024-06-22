@@ -2,8 +2,9 @@ package fileextenh
 
 import (
 	"fmt"
-	"reflect"
 	"testing"
+
+	"github.com/google/go-cmp/cmp"
 )
 
 func ExampleBase_withExtA() {
@@ -128,8 +129,9 @@ func TestBase(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Base(tt.args.fname, tt.args.withExt); got != tt.want {
-				t.Errorf("Base() = %v, want %v", got, tt.want)
+			got := Base(tt.args.fname, tt.args.withExt)
+			if diff := cmp.Diff(got, tt.want); diff != "" {
+				t.Errorf("Base() value is mismatch (-got +tt.want):%s\n", diff)
 			}
 		})
 	}
@@ -168,8 +170,9 @@ func TestExt(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Ext(tt.args.fname); got != tt.want {
-				t.Errorf("GetExt() = %v, want %v", got, tt.want)
+			got := Ext(tt.args.fname)
+			if diff := cmp.Diff(got, tt.want); diff != "" {
+				t.Errorf("GetExt() value is mismatch (-got +tt.want):%s\n", diff)
 			}
 		})
 	}
@@ -212,8 +215,9 @@ func TestMatchFileExt(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := MatchFileExt(tt.args.fname, tt.args.ext); got != tt.want {
-				t.Errorf("MatchFileExt() = %v, want %v", got, tt.want)
+			got := MatchFileExt(tt.args.fname, tt.args.ext)
+			if diff := cmp.Diff(got, tt.want); diff != "" {
+				t.Errorf("MatchFileExt() value is mismatch (-got +tt.want):%s\n", diff)
 			}
 		})
 	}
@@ -294,8 +298,9 @@ func TestGetDblExts(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := getDblExts(tt.args.ext); !reflect.DeepEqual(got, tt.want) {
-				t.Errorf("GetDblExts() = %v, want %v", got, tt.want)
+			got := getDblExts(tt.args.ext)
+			if diff := cmp.Diff(got, tt.want); diff != "" {
+				t.Errorf("GetDblExts() value is mismatch (-got +tt.want):%s\n", diff)
 			}
 		})
 	}
@@ -376,8 +381,9 @@ func TestPossibleDoubleExt(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := possibleDoubleExt(tt.args.ext); got != tt.want {
-				t.Errorf("PossibleDoubleExt() = %v, want %v", got, tt.want)
+			got := possibleDoubleExt(tt.args.ext)
+			if diff := cmp.Diff(got, tt.want); diff != "" {
+				t.Errorf("PossibleDoubleExt() value is mismatch (-got +tt.want):%s\n", diff)
 			}
 		})
 	}
